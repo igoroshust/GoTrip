@@ -1,0 +1,115 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Объявляем CSS-переменные. root - верхний уровень (html) */
+:root {
+    --container-width: 1270px;  /* 1240 ширина контентной части +15px отступ слева и +15px справа */
+    --container-padding: 15px;
+    --secondary: rgba(144,163,154,0.5); /* Полупрозрачный текст для сабтайтлов */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F6F6F6;
+  color: #0F1F1C;
+}
+
+/* Скрываение реализованных элементов при модульной вёрстке */
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto; /* выравнивание контейнера по центру */
+}
+
+/* Header */
+.header {
+    position: relative;
+    min-height: 940px;
+    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    padding-top: 44px;
+    color: #fff;
+}
+
+.header a {
+    color: inherit;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px; /* высота псевдоэлемента (угол посередине) */
+
+    background-image: url('./../img/header/header-bottom.svg');
+    background-size: 100%;
+    /* + В svg удаляем width и height, добавляем preserveAspectRatio="none", чтобы
+    svg трансформировался без учёта пропорций, поскольку svg растянулся с учётом своих пропорций.  */
+}
+
+.header__top {
+    margin-bottom: 86px;
+}
+
+.header__content {
+    max-width: 592px;
+}
+
+/* Nav */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+}
+
+.nav__logo {
+
+}
+
+.nav__list {
+
+}
+
+.nav__login {
+
+}
+
+/* Logo */
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo a {
+    color: inherit;
+}
+
+
+
+
+
+/* Comments */
+/*
+
+.container-right {
+    padding-left: calc( (100% - var(--container-width))/2 + var(--container-padding));
+}
+
+.container-left {
+    padding-right: calc( (100% - var(--container-width))/2 + var(--container-padding));
+}
+
+.block {
+    height: 200px;
+    background-color: darkseagreen;
+}
+
+*/
