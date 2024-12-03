@@ -143,6 +143,51 @@ body {
     top: 1px;
 }
 
+/* Header Content */
+
+.header__badge {
+    display: inline-block; /* размер контейнера исходя из содержимого! */
+    padding: 12px 30px;
+    margin-bottom: 7px;
+
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+
+}
+
+.header__title {
+    margin-bottom: 30px; /* отступ вниз до текста */
+    font-size: 55px;
+}
+
+.header__text {
+    margin-bottom: 68; /* отступ вниз до кнопки */
+    max-width: 519px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header__btn {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
