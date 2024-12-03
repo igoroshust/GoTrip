@@ -65,15 +65,34 @@ body {
 .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     column-gap: 80px;
 }
 
-.nav__logo {
-
+.nav__list {
+    display: flex;
+    column-gap: 80px;
+    font-size: 15px;
+    font-weight: 500; /* medium */
 }
 
-.nav__list {
+.nav__list a {
+    position: relative;
+}
 
+.nav__list a.active::after,
+.nav__list a:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 10px; /* отступ справа при ховере -10px */
+    bottom: -6px;
+
+    display: block;
+    height: 4px;
+    background-color: #C4C4C4;
+    border-radius: 50px;
 }
 
 .nav__login {
