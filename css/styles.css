@@ -32,6 +32,7 @@ body {
     background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
     padding-top: 44px;
     color: #fff;
+    overflow: hidden; /* Картинка не выпадает за пределы шапки */
 }
 
 .header a {
@@ -56,8 +57,30 @@ body {
     margin-bottom: 86px;
 }
 
+.header__row {
+    display: flex;
+}
+
+
 .header__content {
     max-width: 592px;
+    position: relative; /* чтобы картинка не налазила на текст (при изменении окна браузера) */
+}
+
+/* Картинка */
+
+.header__img {
+    position: relative;
+    flex-grow: 1; /* чтобы картинка растянулась и не налазила на блок с контентом */
+}
+
+.header__img img {
+    position: absolute; /* чтобы картинка не сжимала другие блоки */
+    top: -180px; /* размещение картинки в правом верхнем углу */
+    right: -130px;
+    max-width: unset; /* в reset.css прописан max-width: 100%, обнуляем его */
+    width: 894px;
+    height: 940px;
 }
 
 /* Nav */
@@ -163,7 +186,7 @@ body {
 }
 
 .header__text {
-    margin-bottom: 68; /* отступ вниз до кнопки */
+    margin-bottom: 68px; /* отступ вниз до кнопки */
     max-width: 519px;
     font-size: 25px;
     font-weight: 700;
@@ -171,10 +194,23 @@ body {
 }
 
 .header__btn {
-
+    display: inline-block;
+    padding: 27px 48px;
+    font-size: 25px;
+    font-weight: 600;
+    background: linear-gradient(to right, #FF7B4E, #FF584E);
+    border-radius: 27px;
 }
 
+.header__btn:hover {
+    opacity: 0.9;
+    transition: color 0.2s ease-in;
+}
 
+.header__btn:active {
+    position: relative;
+    top: 3px;
+}
 
 
 
