@@ -229,7 +229,6 @@ body {
 
 .destinations__content {
     max-width: 456px;
-    border: 2px solid red;
 }
 
 .destinations__title {
@@ -263,30 +262,55 @@ body {
 
 .destinations__slider {
     width: 1110px;
-    border: 2px solid red;
     flex-shrink: 0; /* чтобы слайдер скрывался при изменении размера окна */
 }
 
 /* Slider */
 
 .slider {
-
+    position: relative;
+    height: 456px; /* задаём высоту блока, чтобы кнопки '<' '>' не прыгали при клике */
 }
 
 .slider__item {
+    margin-top: 27px;
     width: 335px;
     height: 402px;
     object-fit: cover; /* корректное масштабирование */
     border-radius: 35px;
+
+    transition: 0.2s ease-in;
 }
 
-.slider__item.active {
+.slider .center .slider__item { /* увеличиваем центральный элемент в карусели */
+    margin-top: 0;
     width: 380px;
     height: 456px;
 }
 
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Вертикально по центру */
+    z-index: 9;
 
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
 
+    display: flex;
+    padding-left: 26px;
+    align-items: center;
+    background: linear-gradient(to right, #FF7B4E, #FF584E);
+}
+
+.slider__btn--prev { /* Кнопка "Назад" */
+    left: -27px;
+}
+
+.slider__btn--next { /* Кнопка "Вперёд" */
+    right: -27px;
+}
 
 
 
