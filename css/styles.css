@@ -191,25 +191,6 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.header__btn {
-    display: inline-block;
-    padding: 27px 48px;
-    font-size: 25px;
-    font-weight: 600;
-    background: var(--bg-color);
-    border-radius: 27px;
-}
-
-.header__btn:hover {
-    opacity: 0.9;
-    transition: color 0.2s ease-in;
-}
-
-.header__btn:active {
-    position: relative;
-    top: 3px;
-}
-
 /* -------------------------------------------------- Destinations -------------------------------------------------- */
 
 .destinations {
@@ -542,6 +523,12 @@ body {
     font-size: 15px;
     font-weight: 500;
     border-radius: 100px;
+}
+
+.btn--header {
+    padding: 27px 48px;
+    font-size: 25px;
+
 }
 
 
