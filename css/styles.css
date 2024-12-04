@@ -7,6 +7,7 @@
     --container-padding: 15px;
     --secondary: rgba(144,163,154,0.5); /* Полупрозрачный текст для сабтайтлов */
     --bg-color: linear-gradient(to right, #FF7B4E, #FF584E);
+    --orange: #FF7C4E;
 }
 
 body {
@@ -122,6 +123,18 @@ body {
     border-radius: 50px;
 }
 
+/* Убираем стили с футера */
+.nav__list.nav__list--footer a.active::after,
+.nav__list.nav__list--footer a:hover::after {
+    display: none;
+}
+
+/*  */
+.nav__list.nav__list--footer a.active,
+.nav__list.nav__list--footer a:hover {
+    color: var(--orange);
+}
+
 .nav__login {
 
 }
@@ -138,6 +151,10 @@ body {
     color: inherit;
 }
 
+.logo--footer a{
+    color: var(--orange) !important;
+}
+
 .nav__login {
     display: flex;
     align-items: center;
@@ -146,29 +163,6 @@ body {
     font-weight: 500;
 }
 
-/* Button */
-
-.btn {
-    display: inline-block;
-    padding: 25px 45px;
-
-    background: var(--bg-color);
-    color: #fff;
-
-    border-radius: 100px;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.btn:hover {
-    opacity: 0.9;
-    transition: 0.2s ease-in;
-}
-
-.btn:active {
-    position: relative;
-    top: 1px;
-}
 
 /* Header Content */
 
@@ -254,7 +248,7 @@ body {
     padding: 13px 44px;
 
     background: var(--bg-color);
-    color: #fff;
+    color: #fff !important;
 
     border-radius: 100px;
     font-size: 15px;
@@ -509,8 +503,46 @@ body {
     top: 1px;
 }
 
+/* -------------------------------------------------- Footer -------------------------------------------------------- */
 
+.footer {
+    padding: 56px 0 74px;
+}
 
+.footer a {
+    color: var(--secondary);
+}
+
+/* -------------------------------------------------- Buttons ------------------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 25px 45px;
+
+    background: var(--bg-color);
+    color: #fff;
+
+    border-radius: 27px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transition: 0.2s ease-in;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+.btn--login {
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+}
 
 
 
