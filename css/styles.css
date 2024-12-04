@@ -75,6 +75,7 @@ body {
 /* Картинка */
 
 .header__img {
+    content: "";
     position: relative;
     flex-grow: 1; /* чтобы картинка растянулась и не налазила на блок с контентом */
 }
@@ -86,7 +87,22 @@ body {
     max-width: unset; /* в reset.css прописан max-width: 100%, обнуляем его */
     width: 894px;
     height: 940px;
+    pointer-events: none; /* запрет на сохранение картинки, иначе кнопки из nav становятся недоступны */
 }
+
+.header__img img[src="./img/header/header-elements.svg"] {
+    padding-top: 93px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Nav */
 
@@ -462,27 +478,6 @@ body {
     color: var(--secondary);
 }
 
-.subscribe-form__btn {
-    display: inline-block;
-    padding: 34px 86px;
-
-    background: var(--bg-color);
-    color: #fff;
-
-    border-radius: 35px;
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.subscribe-form__btn:hover {
-    opacity: 0.9;
-    transition: 0.2s ease-in;
-}
-
-.subscribe-form__btn:active {
-    position: relative;
-    top: 1px;
-}
 
 /* -------------------------------------------------- Footer -------------------------------------------------------- */
 
@@ -531,6 +526,11 @@ body {
 
 }
 
+.btn--subscribe {
+    padding: 36px 86px;
+    font-size: 25px;
+    font-weight: 600;
+}
 
 
 
