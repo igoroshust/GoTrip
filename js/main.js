@@ -1,3 +1,4 @@
+// Carousel
 $(document).ready(function() {
     const owl = $('.owl-carousel');
     owl.owlCarousel({
@@ -15,4 +16,15 @@ $(document).ready(function() {
     $('.slider__btn--next').click(function() {
         owl.trigger('next.owl.carousel');
     });
+
+// Nav icon
+const navBtn = document.querySelector('.nav__toggle'); // находим кнопку
+const nav  = document.querySelector('.nav');
+const menuIcon = document.querySelector('.menu-icon');
+
+navBtn.onclick = function () {
+    nav.classList.toggle('nav--mobile'); // открываем/закрываем подложку при клике на крестик бургера, доб/удал. класс nav--mobile
+    menuIcon.classList.toggle('menu-icon-active'); // анимация кнопки, добавляя menuIcon класс active
+};
+
 });

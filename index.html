@@ -23,7 +23,7 @@
     <div class="container">
         <div class="header__top">
 
-            <nav class="nav">
+            <nav class="nav"> <!-- для этого элемента также есть nav--mobile, активирующийся при клике на кнопку -->
                 <div class="nav__logo">
                     <h2 class="logo"><a href="#!">GoTrip</a></h2>
                 </div>
@@ -41,11 +41,9 @@
                 </ul>
 
                 <!-- Важно расположить кнопку в одной обёртке с навигацией -->
-                <button class="nav__toggle">
+                <button type="button" class="nav__toggle">
                     <div class="menu-icon-wrapper">
-                        <div class="menu-icon">
-
-                        </div>
+                        <div class="menu-icon"></div>
                     </div>
                 </button>
             </nav>
