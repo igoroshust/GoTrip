@@ -27,6 +27,15 @@ body {
     margin: 0 auto; /* выравнивание контейнера по центру */
 }
 
+.container-right {
+    padding-left: calc( (100% - var(--container-width))/2 + var(--container-padding));
+}
+
+.container-left {
+    padding-right: calc( (100% - var(--container-width))/2 + var(--container-padding));
+}
+
+
 /* ---------------------------------------------------- Header ------------------------------------------------------ */
 .header {
     position: relative;
@@ -90,19 +99,26 @@ body {
     pointer-events: none; /* запрет на сохранение картинки, иначе кнопки из nav становятся недоступны */
 }
 
+/* Графические элементы вокруг картинки */
+.header__img::after {
+    content: "";
+
+    position: absolute;
+    right: -87px;
+
+    width: 830px;
+    height: 622px;
+
+    background-image: url('./../img/header/header-elements.svg');
+    pointer-events: none;
+
+}
+
+/*
 .header__img img[src="./img/header/header-elements.svg"] {
     padding-top: 93px;
 }
-
-
-
-
-
-
-
-
-
-
+*/
 
 /* Nav */
 
@@ -151,9 +167,10 @@ body {
     color: var(--orange);
 }
 
-.nav__login {
-
+.nav__toggle {
+    display: none;
 }
+
 
 /* Logo */
 
@@ -532,6 +549,7 @@ body {
     font-weight: 600;
 }
 
+/* --------------------------------------------------  -------------------------------------------------- */
 
 
 
@@ -541,20 +559,36 @@ body {
 
 
 
-/* Comments */
-/*
 
-.container-right {
-    padding-left: calc( (100% - var(--container-width))/2 + var(--container-padding));
+
+/* -------------------------------------------------- Media --------------------------------------------------------- */
+
+@media screen and (max-width: 1269px) {
+    .container-right {
+        padding-left: 15px;
+    }
+
+    .container-left {
+        padding-right: 15px;
+    }
+
 }
 
-.container-left {
-    padding-right: calc( (100% - var(--container-width))/2 + var(--container-padding));
+@media screen and (max-width: 1000px) {
+    .nav__list {
+        display: none;
+    }
+
+    .nav__login {
+        display: none;
+    }
+
+    .nav__toggle {
+        display: block;
+    }
+
 }
 
-.block {
-    height: 200px;
-    background-color: darkseagreen;
-}
+@media screen and (max-width: 1269px) {
 
-*/
+}
