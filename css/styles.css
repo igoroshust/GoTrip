@@ -690,7 +690,7 @@ body {
     /* Расположение бургура в левом верхнем углу, если .nav--mobile = true */
    .nav--mobile .nav__toggle {
         position: fixed;
-        top: 40px;
+        top: 45px;
         right: 20px;
     }
 
@@ -708,6 +708,7 @@ body {
 
 @media screen and (max-width: 850px) {
     .header {
+        min-height: unset; /* обнуляем высоту, чтобы картинка не отрывалась от низа страницы */
         padding-top: 20px;
     }
 
@@ -753,5 +754,23 @@ body {
         right: 0;
     }
 
+}
+
+@media screen and (max-width: 700px) {
+
+   .header__img::after {
+        display: none;
+    }
+
+   .nav--mobile .nav__toggle {
+        top: 20px;
+        right: 15px;
+   }
+
+   .nav--mobile .nav__list,
+   .nav--mobile .nav__login {
+       row-gap: 20px;
+   }
 
 }
+
