@@ -25,6 +25,7 @@ const menuIcon = document.querySelector('.menu-icon');
 navBtn.onclick = function () {
     nav.classList.toggle('nav--mobile'); // открываем/закрываем подложку при клике на крестик бургера, доб/удал. класс nav--mobile
     menuIcon.classList.toggle('menu-icon-active'); // анимация кнопки, добавляя menuIcon класс active
+    document.body.classList.toggle('no-scroll'); // убираем скролл на подложке
 };
 
 });

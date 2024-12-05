@@ -635,6 +635,10 @@ body {
         display: block;
     }
 
+    .no-scroll {
+        overflow-y: hidden;
+    }
+
     /* Подложка для мобильного меню, растянутая на всю ширину */
     .nav--mobile {
         position: fixed;
@@ -683,7 +687,6 @@ body {
         font-size: 22px;
     }
 
-
     /* Расположение бургура в левом верхнем углу, если .nav--mobile = true */
    .nav--mobile .nav__toggle {
         position: fixed;
@@ -691,8 +694,64 @@ body {
         right: 20px;
     }
 
+    /* Картинка перемещается вправо */
+    .header__img img {
+        right: -256px;
+    }
+
+    /* Псевдоэлементы (el) перемещаются вправо */
+    .header__img::after {
+        right: -300px;
+    }
+
 }
 
-@media screen and (max-width: 1269px) {
+@media screen and (max-width: 850px) {
+    .header {
+        padding-top: 20px;
+    }
+
+    .header__top {
+        margin-bottom: 40px;
+    }
+
+    .header__row {
+        flex-direction: column;
+    }
+
+    .header__badge {
+        margin-bottom: 5px;
+        padding: 8px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .header__title {
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    .header__text {
+        margin-bottom: 40px;
+        font-size: 20px;
+        max-width: 450px; /* сабтайтл не выходит за пределы заголовка */
+    }
+
+    .btn--header {
+        padding: 20px 30px;
+        border-radius: 10px;
+    }
+
+    .header__img img {
+        position: static; /* картинка растягивает шапку по высоте (чтобы вмещалась) */
+        width: 80%; /* 70% от ширины экрана */
+        height: auto;
+    }
+
+    .header__img::after {
+        top: 150px;
+        right: 0;
+    }
+
 
 }
