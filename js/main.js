@@ -8,12 +8,13 @@ $(document).ready(function() {
         startPosition: 1,
         items: 3,
         responsive: {
-            850: {
-                startPosition: 0,
-                items: 3,
+            100: {
+                items: 1,
             },
-            1000: {
-                margin: 20,
+            410: {
+                items: 2,
+            },
+            700: {
                 items: 3,
             },
             1200: {
