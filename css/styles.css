@@ -795,7 +795,6 @@ body {
         width: 100% /* Расположение карусели по всей ширине */
     }
 
-
     .slider {
         height: 304px;
     }
@@ -818,6 +817,27 @@ body {
 
     .slider__btn--next {
         right: -15px; /* Кнопки вылазят на 15 пикселей по краям */
+    }
+
+    .destinations__title {
+        margin-bottom: 10px;
+        font-size: 35px;
+    }
+
+    .destinations__title span {
+        display: block; /* Чтобы спан был вверху страницы */
+        font-size: 20px;
+    }
+
+    .destinations__text {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 20px 35px;
+        border-radius: 20px;
+        font-size: 18px;
     }
 
 }
