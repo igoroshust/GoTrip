@@ -620,6 +620,10 @@ body {
         padding-right: 15px;
     }
 
+    .desinations__slider {
+        width: 900px; /* Центральное изображение становится видимым */
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -704,6 +708,22 @@ body {
         right: -300px;
     }
 
+    .destinations__slider {
+        width: 700px;
+    }
+
+    .slider .slider__item {
+        margin-top: 18px;
+        width: 223px;
+        height: 268px;
+    }
+
+    .slider .center .slider__item {
+        margin-top: 0;
+        width: 253px;
+        height: 304px;
+    }
+
 }
 
 @media screen and (max-width: 850px) {
@@ -752,6 +772,15 @@ body {
     .header__img::after {
         top: 150px;
         right: 0;
+    }
+
+    .destinations__row {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .destinations__slider {
+        width: 100% /* Расположение карусели по всей ширине */
     }
 
 }
