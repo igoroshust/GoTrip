@@ -712,6 +712,10 @@ body {
         width: 700px;
     }
 
+   .slider {
+        height: 304px;
+    }
+
     .slider .slider__item {
         margin-top: 18px;
         width: 223px;
