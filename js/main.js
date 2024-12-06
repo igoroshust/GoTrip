@@ -4,13 +4,13 @@ $(document).ready(function() {
     owl.owlCarousel({
         center: true,
         loop: true,
-        margin: 30,
+        margin: 20,
         startPosition: 1,
         items: 3,
         responsive: {
             850: {
                 startPosition: 0,
-                items: 2,
+                items: 3,
             },
             1000: {
                 margin: 20,

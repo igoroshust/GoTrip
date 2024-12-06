@@ -229,7 +229,7 @@ body {
 /* -------------------------------------------------- Destinations -------------------------------------------------- */
 
 .destinations {
-    padding: 96px 100px;
+    padding: 96px 0 100px;
     overflow-x: hidden;
 }
 
@@ -731,6 +731,10 @@ body {
 }
 
 @media screen and (max-width: 850px) {
+    .container-right {
+        padding-right: 15px;
+    }
+
     .header {
         min-height: unset; /* обнуляем высоту, чтобы картинка не отрывалась от низа страницы */
         padding-top: 20px;
@@ -778,6 +782,10 @@ body {
         right: 0;
     }
 
+    .destinations {
+        padding: 40px 0 50px;
+    }
+
     .destinations__row {
         flex-direction: column;
         row-gap: 30px;
@@ -785,6 +793,31 @@ body {
 
     .destinations__slider {
         width: 100% /* Расположение карусели по всей ширине */
+    }
+
+
+    .slider {
+        height: 304px;
+    }
+
+    .slider .slider__item {
+        margin-top: 18px;
+        width: 223px;
+        height: 268px;
+    }
+
+    .slider .center .slider__item {
+        margin-top: 0;
+        width: 253px;
+        height: 304px;
+    }
+
+    .slider__btn--prev {
+        left: -15px; /* Кнопки вылазят на 15 пикселей по краям */
+    }
+
+    .slider__btn--next {
+        right: -15px; /* Кнопки вылазят на 15 пикселей по краям */
     }
 
 }
