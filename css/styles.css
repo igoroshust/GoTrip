@@ -74,7 +74,6 @@ body {
     display: flex;
 }
 
-
 .header__content {
     max-width: 592px;
 
@@ -84,7 +83,6 @@ body {
 }
 
 /* Картинка */
-
 .header__img {
     content: "";
     position: relative;
@@ -104,26 +102,17 @@ body {
 /* Графические элементы вокруг картинки */
 .header__img::after {
     content: "";
-
     position: absolute;
     right: -87px;
-
     width: 830px;
     height: 622px;
 
     background-image: url('./../img/header/header-elements.svg');
-    pointer-events: none;
+    pointer-events: none; /* элемент обходится для указателя мыши */
 
 }
 
-/*
-.header__img img[src="./img/header/header-elements.svg"] {
-    padding-top: 93px;
-}
-*/
-
-/* Nav */
-
+/* Navigation */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -145,7 +134,6 @@ body {
 .nav__list a.active::after,
 .nav__list a:hover::after {
     content: "";
-
     position: absolute;
     left: 0;
     right: 10px; /* отступ справа при ховере -10px */
@@ -158,12 +146,12 @@ body {
 }
 
 /* Убираем стили с футера */
+
 .nav__list.nav__list--footer a.active::after,
 .nav__list.nav__list--footer a:hover::after {
     display: none;
 }
 
-/*  */
 .nav__list.nav__list--footer a.active,
 .nav__list.nav__list--footer a:hover {
     color: var(--orange);
@@ -172,7 +160,6 @@ body {
 .nav__toggle {
     display: none;
 }
-
 
 /* Logo */
 
@@ -197,7 +184,6 @@ body {
     font-size: 15px;
     font-weight: 500;
 }
-
 
 /* Header Content */
 
@@ -350,17 +336,13 @@ body {
     border-radius: 60px;
 }
 
-.customers__content {
-
-}
-
 .customers__title {
     margin-bottom: 35px;
     font-size: 45px;
     font-weight: 500;
 }
 
-/* Ревью */
+/* Review */
 
 .review {
     max-width: 491px; /* определили по длине строки с отзывом*/
@@ -381,10 +363,6 @@ body {
     overflow: hidden; /* Чтобы картинка не выходила за пределы блока */
 }
 
-.review__client-desc { /* Описание User'a */
-
-}
-
 .review__client-desc-name { /* Имя пользователя */
     margin-bottom: 10px;
     font-size: 33px;
@@ -403,11 +381,7 @@ body {
     font-weight: 500;
 }
 
-.review__rating {
-
-}
-
-/* -------------------------------------------------- Cta ----------------------------------------------------------- */
+/* -------------------------------------------------- CTA ----------------------------------------------------------- */
 
 .cta {
     padding: 100px 0;
@@ -457,18 +431,10 @@ body {
     color: var(--secondary);
 }
 
-.cta__button {
-
-}
-
 /* -------------------------------------------------- Subscribe ----------------------------------------------------- */
 
 .subscribe {
     padding: 35px 0 50px;
-}
-
-.container {
-
 }
 
 .subscribe__content {
@@ -641,11 +607,9 @@ body {
         height: auto; /* Высота будет автоматически подстраиваться */
         border-radius: 40px; /* Уменьшаем радиус границ */
     }
-
 }
 
 @media screen and (max-width: 1000px) {
-
     .nav {
         column-gap: 20px;
     }
@@ -754,7 +718,6 @@ body {
         width: 253px;
         height: 304px;
     }
-
 }
 
 @media screen and (max-width: 850px) {
@@ -878,7 +841,6 @@ body {
         border-radius: 100px;
     }
 
-
     /* Customers */
 
     .customers {
@@ -973,11 +935,9 @@ body {
     .nav__login--footer {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 670px) {
-
    .header__img::after {
         display: none;
     }
@@ -1021,11 +981,9 @@ body {
         flex-direction: column-reverse;
         row-gap: 30px;
     }
-
 }
 
 @media (max-width: 490px) {
-
     .cta__plate::before {
         display: none;
     }
@@ -1036,7 +994,6 @@ body {
 }
 
 @media (max-width: 460px) {
-
     .subscribe-form {
         flex-direction: column;
         row-gap: 10px;
@@ -1055,8 +1012,6 @@ body {
         font-size: 20px;
         align-items: center;
     }
-
-
 }
 
 

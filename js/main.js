@@ -31,7 +31,7 @@ $(document).ready(function() {
         owl.trigger('next.owl.carousel');
     });
 
-// Nav icon
+// Navigation icon
 const navBtn = document.querySelector('.nav__toggle'); // находим кнопку
 const nav  = document.querySelector('.nav');
 const menuIcon = document.querySelector('.menu-icon');
